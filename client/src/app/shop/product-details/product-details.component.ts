@@ -18,7 +18,7 @@ ngOnInit(){
 }
 
 loadProduct(){
-  this.shopService.getProduct(+this.activateRoute.snapshot.paramMap.get('id')).subscribe(product => {
+  this.shopService.getProduct(2).subscribe(product => {
     this.product = product;
   }, error => {
     console.log(error);
