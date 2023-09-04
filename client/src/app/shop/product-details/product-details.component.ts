@@ -11,14 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetailsComponent implements OnInit{
 product: IProduct;
 
-constructor(private shopService: ShopService, private activateRoute: ActivatedRoute){}  
+constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute){}  
 
 ngOnInit(){
   this.loadProduct();
 }
 
 loadProduct(){
-  this.shopService.getProduct(2).subscribe(product => {
+  let id = +this.activatedRoute.snapshot.paramMap.get('id');
+  this.shopService.getProduct(1).subscribe(product => {
     this.product = product;
   }, error => {
     console.log(error);
