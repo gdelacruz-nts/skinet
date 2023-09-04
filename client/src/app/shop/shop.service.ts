@@ -42,7 +42,7 @@ getProducts(shopParams: ShopParams) {
 }
 
 getProduct(id: number){
-  return this.http.get<IProduct>(this.baseUrl + 'products/' + id);
+  return this.http.get<IProduct>(this.baseUrl + 'products/'+ id);
 }
 
 getBrands() {

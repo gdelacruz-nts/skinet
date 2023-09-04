@@ -18,11 +18,11 @@ ngOnInit(){
 }
 
 loadProduct(){
-  let id = +this.activatedRoute.snapshot.paramMap.get('id');
-  this.shopService.getProduct(1).subscribe(product => {
-    this.product = product;
-  }, error => {
-    console.log(error);
-  });
+  const id = +this.activatedRoute.snapshot.paramMap.get('id');
+  this.shopService.getProduct(id)
+    .subscribe({
+      next: (res) => this.product = res,
+      error: (err) => console.log(err)
+      });
 }
 }
