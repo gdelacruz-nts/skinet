@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
+
 @Component({
   selector: 'app-test-error',
   templateUrl: './test-error.component.html',
@@ -9,6 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class TestErrorComponent implements OnInit{
 baseUrl = environment.apiUrl;
+validationErrors: any;
 
   constructor(private http: HttpClient){}
 
@@ -43,7 +45,8 @@ baseUrl = environment.apiUrl;
     this.http.get(this.baseUrl + 'products/fortytwo')
     .subscribe({
       next: (res) => console.log(res),
-      error: (err) => console.log(err)
+      error: (error) => {console.log(error);
+         this.validationErrors = error.errors}
       });
   }  
   
