@@ -4,7 +4,7 @@
         <section class="col-3">
             <ng-container *ngIf="types && brands">
             <h5 class="text-warning ml-3 mt-3">Sort</h5>
-            <select title="sort-selector mb-3" class="custom-select mb-3"style="width: 100%" (change)="onSortselected($event.target.value)">
+            <select title="sort-selector mb-3" class="custom-select mb-3 rounded" style="width: 100%" (change)="onSortselected($event.target.value)">
                 <option *ngFor="let sort of sortOptions"
                         [value]="sort.value"   
                     >
