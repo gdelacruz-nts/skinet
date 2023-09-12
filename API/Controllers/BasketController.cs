@@ -36,6 +36,6 @@ namespace API.Controllers
         public async Task DeleteBasket(string id)
         {
             await _basketRepository.DeleteBasketAsync(id);
-;        }
+        }
     }
 }
