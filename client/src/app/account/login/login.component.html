@@ -1,14 +1,14 @@
 <div class="d-flex justify-content-center mt-5">
     <div class="col-3">
-        <form speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">
-    
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" 
+        speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">    
             <h1 class="h3 mb-3 fw-normal" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="28px">Please sign in</h1>
             <div class="form-floating" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">
+              <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">
               <label for="floatingInput" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">Email address</label>
             </div>
             <div class="form-floating" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">
+              <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">
               <label for="floatingPassword" speechify-initial-font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji" speechify-initial-font-size="16px">Password</label>
             </div>
         
